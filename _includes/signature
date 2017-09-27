@@ -1,0 +1,26 @@
+{% capture signature %}
+
+{% comment %}Get the data{% endcomment %}
+{% assign pagename = page.url | remove: ".html" | split: "/" | last %}
+{% assign person = site.data.team | where_exp: "person", "person.file == pagename" %}
+{% for detail in person %}
+    {% capture name %}{{ detail.name }}{% endcapture %}
+    {% capture role %}{{ detail.role }}{% endcapture %}
+    {% capture phone %}{{ detail.phone }}{% endcapture %}
+{% endfor %}
+
+{% comment %}Create a table{% endcomment %}
+<table style="border-collapse: collapse; font-size: x-small; font-family: sans-serif;">
+    <tr>
+        <td style="padding-right: 0.5em; border: 0;">
+            <img src="images/fireandlion-logo.png" style="max-height: 6em" />
+        </td>
+        <td style="border: 0;">
+            <div style="font-weight: bold">Fire and Lion</div>
+            <div>{{ name }}</div>
+            <div>{{ role }}</div>
+            <div>{{ phone }}</div>
+        </td>
+    </tr>
+</table>
+{% endcapture %}{{ signature }}
