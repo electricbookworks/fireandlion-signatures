@@ -10,7 +10,7 @@
 {% endfor %}
 
 {% comment %}Create a table{% endcomment %}
-<table style="border-collapse: collapse; font-size: x-small; font-family: sans-serif;">
+<table style="border-collapse: collapse; font-size: smaller; font-family: sans-serif;">
     <tr>
         <td style="padding-right: 0.5em; border: 0;">
             <img src="images/fireandlion-logo.png" style="max-height: 6em" />

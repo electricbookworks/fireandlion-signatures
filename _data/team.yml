@@ -1,20 +1,20 @@
 - file: arthur
   name: Arthur Attwell
-  role: Director
+  role: "Director | Innovation and technology"
   phone: +27 83 647 9678
 - file: karen
   name: Karen Lilje
-  role: Director
+  role: "Director | Information design"
   phone: +27 21 409 7000
 - file: jennifer
   name: Jennifer Jacobs
-  role: Designer
+  role: Design
   phone: +27 21 409 7000
 - file: christina
   name: Christina Tromp
-  role: Assistant Editor
+  role: Editorial
   phone: +27 21 409 7000
 - file: dione
   name: Dione Mentis
-  role: Publishing Manager
+  role: Publishing
   phone: +27 21 409 7000
