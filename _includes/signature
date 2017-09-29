@@ -1,5 +1,10 @@
 {% capture signature %}
 
+{% assign style = default %}
+{% if include.style %}
+    {% assign style = include.style %}
+{% endif %}
+
 {% comment %}Get the data{% endcomment %}
 {% assign pagename = page.url | remove: ".html" | split: "/" | last %}
 {% assign person = site.data.team | where_exp: "person", "person.file == pagename" %}
@@ -9,18 +14,24 @@
     {% capture phone %}{{ detail.phone }}{% endcapture %}
 {% endfor %}
 
-{% comment %}Create a table{% endcomment %}
-<table style="border-collapse: collapse; font-size: smaller; font-family: sans-serif;">
+{% assign font-stack = "'josefin_sansregular','Lato','Helvetica','Roboto','Helvetica Neue',sans-serif" %}
+
+<table style="border-collapse: collapse; font-size: smaller; font-family: {{ font-stack }};">
     <tr>
         <td style="padding-right: 0.5em; border: 0;">
             <img src="images/fireandlion-logo.png" style="max-height: 6em" />
         </td>
         <td style="border: 0;">
-            <div style="font-weight: bold">Fire and Lion</div>
+            <div style="font-weight: bold">
+                <a href="http://fireandlion.com" style="text-decoration: none; color: inherit;">
+                    FIRE AND LION<span style="font-style: smaller; color: #ccc; font-weight: normal"> .com</span>
+                </a>
+            </div>
             <div>{{ name }}</div>
             <div>{{ role }}</div>
             <div>{{ phone }}</div>
         </td>
     </tr>
 </table>
+
 {% endcapture %}{{ signature }}
