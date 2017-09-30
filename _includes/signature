@@ -7,14 +7,9 @@
 {% endif %}
 
 {% comment %}Get the data{% endcomment %}
-{% assign pagename = page.url | remove: ".html" | split: "/" | last %}
-{% assign person = site.data.team | where_exp: "person", "person.file == pagename" %}
-{% for detail in person %}
-    {% capture name %}{{ detail.name }}{% endcapture %}
-    {% capture role %}{{ detail.role }}{% endcapture %}
-    {% capture phone %}{{ detail.phone }}{% endcapture %}
-{% endfor %}
+{% include data %}
 
+{% comment %}Create a font stack{% endcomment %}
 {% assign font-stack = "'Lato','Helvetica','Roboto','Helvetica Neue','Gill Sans',sans-serif" %}
 
 {% comment %}In our styling here, we're trying to control

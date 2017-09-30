@@ -1,0 +1,8 @@
+{% comment %}Data{% endcomment %}
+{% assign pagename = page.url | remove: ".html" | split: "/" | last %}
+{% assign person = site.data.team | where_exp: "person", "person.file == pagename" %}
+{% for detail in person %}
+    {% capture name %}{{ detail.name }}{% endcapture %}
+    {% capture role %}{{ detail.role }}{% endcapture %}
+    {% capture phone %}{{ detail.phone }}{% endcapture %}
+{% endfor %}
