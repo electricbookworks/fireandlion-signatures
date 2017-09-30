@@ -1,4 +1,5 @@
 ---
+title: Fire and Lion email signatures
 ---
 
 # {{ site.title }}

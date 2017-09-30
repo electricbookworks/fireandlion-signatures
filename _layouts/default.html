@@ -1,9 +1,10 @@
 ---
 layout: compress
 ---
+{% include data %}
 <html>
     <head>
-        <title></title>
+        <title>{% if name %}{{ name }}{% else %}{{ page.title }}{% endif %}</title>
         {% if page.url == "/" %}
         <link rel="stylesheet" type="text/css" href="styles/web.css"/>
         {% endif %}
