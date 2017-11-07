@@ -19,17 +19,12 @@ step, control layout. Styles are inline, sometimes !important.{% endcomment %}
 <table style="border-collapse: collapse; font-size: smaller; font-family: {{ font-stack }};">
     <tr>
         <td style="padding-right: 0.5em; border: 0;">
-            <img src="https://fireandlion.github.io/signatures/images/fireandlion-logo.png" style="max-height: 6em" />
+            <img src="https://fireandlion.github.io/signatures/images/fireandlion-logo.png" width="60px" height="60px" style="max-height: 6em" />
         </td>
         <td style="border: 0;">
-            <div style="font-weight: bold">
-                <a href="http://fireandlion.com" style="text-decoration: none!important; text-decoration-line: none!important; text-decoration-color: transparent; color: black;">
-                    FIRE AND LION<span style="font-style: smaller; color: #ccc; font-weight: normal"> .com</span>
-                </a>
-            </div>
-            <div>{{ name }}</div>
+            <div style="font-weight: bold">{{ name }}, FIRE <span style="font-size: smaller">AND</span> LION</div>
             <div>{{ role }}</div>
-            <div itemprop="telephone" content="{{ phone }}" style="text-decoration: none!important; color: black;">{{ phone }}</div>
+            <div itemprop="telephone" content="{{ phone }}" style="text-decoration: none!important; color: black;">{{ phone }} | <a href="https://fireandlion.com">fireandlion.com</a></div>
         </td>
     </tr>
 </table>
