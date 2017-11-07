@@ -22,9 +22,17 @@ step, control layout. Styles are inline, sometimes !important.{% endcomment %}
             <img src="https://fireandlion.github.io/signatures/images/fireandlion-logo.png" width="60px" height="60px" style="max-height: 6em" />
         </td>
         <td style="border: 0;">
-            <div style="font-weight: bold">{{ name }}, FIRE <span style="font-size: smaller">AND</span> LION</div>
-            <div>{{ role }}</div>
-            <div itemprop="telephone" content="{{ phone }}" style="text-decoration: none!important; color: black;">{{ phone }} | <a href="https://fireandlion.com">fireandlion.com</a></div>
+            <div><span style="font-weight: bold">{{ name }}</span></div>
+            <div>
+                <span style="font-weight: bold">FIRE <span style="font-size: smaller">AND</span> LION</span>
+                |
+                <span>{{ role }}</span>
+            </div>
+            <div>
+                <span itemprop="telephone" content="{{ phone }}" style="text-decoration: none!important; color: black;">{{ phone }}</span>
+                |
+                <a style="text-decoration: none!important; color: black;" href="https://fireandlion.com">fireandlion.com</a>
+            </div>
         </td>
     </tr>
 </table>
